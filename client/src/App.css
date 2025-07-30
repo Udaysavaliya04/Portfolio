@@ -31,8 +31,6 @@
   --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 body {
   background: var(--primary);
   color: var(--text-primary);
