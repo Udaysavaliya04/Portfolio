@@ -24,7 +24,10 @@ const Contact = () => {
     setSubmitStatus('');
 
     try {
-      await axios.post('http://localhost:5001/api/contact', formData);
+      const apiUrl = process.env.NODE_ENV === 'production' 
+        ? '/api/contact' 
+        : 'http://localhost:5001/api/contact';
+      await axios.post(apiUrl, formData);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
