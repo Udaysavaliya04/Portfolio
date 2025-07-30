@@ -1,8 +1,10 @@
+@import './fonts/inter.css';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   letter-spacing: -0.05em;
 }
 
@@ -278,6 +280,29 @@ p {
 
 .text-center { text-align: center; }
 .text-accent { background: var(--gradient-primary); }
+.text-italic { font-style: italic; font-weight: 400; }
+.text-emphasis { 
+  font-style: italic; 
+  font-weight: 500; 
+  color: var(--accent); 
+  position: relative;
+}
+
+.text-emphasis::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.text-emphasis:hover::after {
+  opacity: 0.8;
+}
 
 .btn {
   display: inline-flex;
@@ -623,6 +648,8 @@ p {
   letter-spacing: 0.15em;
   display: block;
   margin-bottom: 1rem;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .section-title {
@@ -638,6 +665,8 @@ p {
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .portfolio-grid {
@@ -774,6 +803,8 @@ p {
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .project-tech {
@@ -835,6 +866,8 @@ p {
   color: var(--text-secondary);
   display: block;
   margin-bottom: 0.5rem;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .hero-name {
@@ -904,6 +937,8 @@ p {
   line-height: 1.6;
   margin: 2rem 0;
   max-width: 500px;
+  font-style: italic;
+  font-weight: 400;
 }
 
 
@@ -1708,6 +1743,60 @@ textarea.form-input {
 }
 
 /* Enhanced Mobile Responsive Styles */
+
+/* Quote and Emphasis Styles */
+.quote {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  position: relative;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.quote::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--accent);
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  font-family: Georgia, serif;
+  opacity: 0.5;
+}
+
+.quote::after {
+  content: '"';
+  font-size: 4rem;
+  color: var(--accent);
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  font-family: Georgia, serif;
+  opacity: 0.5;
+}
+
+.signature {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+/* Subtle Italic Accents */
+.skill-description,
+.contact-subtitle,
+.project-quote {
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
