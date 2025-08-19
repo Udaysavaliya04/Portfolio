@@ -24,7 +24,7 @@ const ProjectShowcase = () => {
         "jdoodle API",
       ],
       github: "https://github.com/Udaysavaliya04/techify",
-      live: "https://github.com/Udaysavaliya04/techify",
+      live: "https://techify-platform.onrender.com/",
       featured: true,
     },
     {
@@ -43,7 +43,7 @@ const ProjectShowcase = () => {
         "MongoDB",
       ],
       github: "https://github.com/Udaysavaliya04/prysm",
-      live: "https://prysm-ugro.onrender.com/",
+      live: "https://github.com/Udaysavaliya04/prysm",
       featured: true,
     },
   ];
